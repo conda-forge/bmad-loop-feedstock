@@ -36,7 +36,7 @@ requirements:
     - tomlkit >=0.13  # tui
     - pyte >=0.8.2  # tui
     - rich >=14.2  # tui
-    - httpx>=0.28  # opencode
+    - httpx >=0.28  # opencode
   run_constraints:
     - herdr
 
