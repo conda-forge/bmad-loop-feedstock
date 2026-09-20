@@ -8,7 +8,6 @@ conda_build:
 conda_forge_output_validation: true
 noarch_platforms:
   - linux_64
-  - win_64
   - osx_64
   - osx_arm64
   - linux_ppc64le
