@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.11.1"
+  version: "0.12.0"
 
 package:
   name: bmad-loop
@@ -10,11 +10,11 @@ package:
 
 source:
   url: https://github.com/bmad-code-org/bmad-loop/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 7aca4c5899b4409679cdbe44dc729f59aaf2a6071282b1521a43b51662ba88d8
+  sha256: 8a299a049aa1e276fd09a68e51b0c2ca3301e0df6f264c68cff32ca27ee6b41c
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
