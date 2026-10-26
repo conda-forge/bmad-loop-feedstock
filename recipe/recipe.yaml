@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.12.0"
+  version: 0.13.2
 
 package:
   name: bmad-loop
@@ -10,11 +10,11 @@ package:
 
 source:
   url: https://github.com/bmad-code-org/bmad-loop/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 8a299a049aa1e276fd09a68e51b0c2ca3301e0df6f264c68cff32ca27ee6b41c
+  sha256: c6251744314d898be1bf5e94043d14dfbe19fcc4c6995bcab99f252648464ee4
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
@@ -36,12 +36,7 @@ requirements:
     - python >=${{ python_min }}
     - pyyaml >=6.0
     - regex >=2024.11.6
-    - psutil >=7.2.2  # non-linux
-    - textual >=8.0,<9  # tui
-    - tomlkit >=0.13  # tui
-    - pyte >=0.8.2  # tui
-    - rich >=14.2  # tui
-    - httpx >=0.28  # opencode
+    - psutil >=7.2.2
   run_constraints:
     - herdr
 
@@ -52,7 +47,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - script:
       - bmad-loop --version
       - bmad-loop --help
